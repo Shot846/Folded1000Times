@@ -22,4 +22,6 @@ Bottom-left meter is soul meter, goes up as you kill enemies with the sword and 
 Hold down fire to ready up. Double-tap a direction while readying to do a special attack.<br>
 Hold Run and a direction to dodge in that direction, passing harmlessly through projectiles.<br>
 
+
+Shot846:
 Why did I fork this? I replaced the dash code so it doesn't use byteangle, now it uses High Noon Drifter's implementation, so the dashing is accurate.
