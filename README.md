@@ -21,3 +21,5 @@ Top-right meter is combo meter, goes up as you land hits on enemies. Higher rank
 Bottom-left meter is soul meter, goes up as you kill enemies with the sword and drain their soul. Two notches are needed for special attacks.<br>
 Hold down fire to ready up. Double-tap a direction while readying to do a special attack.<br>
 Hold Run and a direction to dodge in that direction, passing harmlessly through projectiles.<br>
+
+Why did I fork this? I replaced the dash code so it doesn't use byteangle, now it uses High Noon Drifter's implementation, so the dashing is accurate.
