@@ -1,8 +1,20 @@
 // Original walljump script by Xaser, manipulated and tweaked and bastardized for my own purposes.
+
+int velx2,vely2,velz2;
+int stick_forward; // positive is forward, negative is backward
+int stick_side; // positive is right, negative is left
+// Both of the above have a range of [-12800, 12800]
+
+
+int previous_buttons;
+int current_buttons;
+int MoveAngle;
+
 script SINO_DOUBLEJUMP ENTER
 {
     int buttons;
     int preventReset;
+
 
     if (CheckInventory("IsJungHaeLin") == 1)
     { terminate; }
@@ -114,10 +126,10 @@ script SINO_JETBOOSTER ENTER
           // and are given a powerup and a cooldown.
           if (buttons & BT_SPEED && ( buttons & BT_FORWARD | buttons & BT_MOVELEFT | buttons & BT_BACK | buttons & BT_MOVERIGHT ) )
           {
-              if (buttons & BT_FORWARD) { ThrustThing(KurtAngle+0,25,0,0); }
-              if (buttons & BT_MOVELEFT) { ThrustThing(KurtAngle+64,25,0,0); }
-              if (buttons & BT_BACK) { ThrustThing(KurtAngle+128,25,0,0); }
-              if (buttons & BT_MOVERIGHT) { ThrustThing(KurtAngle+192,25,0,0); }
+              if (buttons & BT_FORWARD) { SetActorVelocity(0,velx2 + FixedMul(cos(GetActorAngle(0)),25.0),vely2 + FixedMul(sin(GetActorAngle(0)),25.0),-21.0,1,0);; }
+              if (buttons & BT_MOVELEFT) { SetActorVelocity(0,velx2 + FixedMul(cos(GetActorAngle(0)+16384),25.0),vely2 + FixedMul(sin(GetActorAngle(0)+16384),25.0),-21.0,1,0); }
+              if (buttons & BT_BACK) { SetActorVelocity(0,velx2 + FixedMul(cos(GetActorAngle(0)+32768),25.0),vely2 + FixedMul(sin(GetActorAngle(0)+32768),25.0),-21.0,1,0); }
+              if (buttons & BT_MOVERIGHT) { SetActorVelocity(0,velx2 + FixedMul(cos(GetActorAngle(0)+49152),25.0),vely2 + FixedMul(sin(GetActorAngle(0)+49152),25.0),-21.0,1,0); }
               if (CheckInventory("OnTheGround") == 0) { ThrustThingZ(0,18,0,0); }
                   else { ThrustThingZ(0,12,0,0); }
               ActivatorSound("shihong/thruster",127);
@@ -153,6 +165,7 @@ script SINO_JETBOOSTER ENTER
         { terminate; }
     }
 }
+
 
 /*
 

@@ -712,7 +712,7 @@ script WEEB_ENTER ENTER
           }
           if (buttons & BT_SPEED && buttons & BT_FORWARD)
           {
-              if (CheckInventory("OnTheGround") == 1) { ThrustThing(KurtAngle+0,35,1,0); ThrustThingZ(0,85,1,1); } else { ThrustThing(KurtAngle+0,40,0,0); ThrustThingZ(0,20,0,0); }
+              if (CheckInventory("OnTheGround") == 1) { SetActorVelocity(0,velx + FixedMul(cos(GetActorAngle(0)),35.0),vely + FixedMul(sin(GetActorAngle(0)),35.0),-21.0,0,0); } else { SetActorVelocity(0,velx + FixedMul(cos(GetActorAngle(0)),35.0),vely + FixedMul(sin(GetActorAngle(0)),35.0),5.0,0,0); }
               ActivatorSound("ghost/step",127);
               GiveInventory("GhostStepDone",1);
               GiveInventory("GhostStepCooldown",35);
@@ -720,7 +720,7 @@ script WEEB_ENTER ENTER
           }
           if (buttons & BT_SPEED && buttons & BT_MOVELEFT)
           {
-              if (CheckInventory("OnTheGround") == 1) { ThrustThing(KurtAngle+64,35,1,0); ThrustThingZ(0,85,1,1); } else { ThrustThing(KurtAngle+64,40,0,0); ThrustThingZ(0,20,0,0); }
+              if (CheckInventory("OnTheGround") == 1) { SetActorVelocity(0,velx + FixedMul(cos(GetActorAngle(0)+16384),35.0),vely + FixedMul(sin(GetActorAngle(0)+16384),35.0),-21.0,0,0); } else { SetActorVelocity(0,velx + FixedMul(cos(GetActorAngle(0)+16384),35.0),vely + FixedMul(sin(GetActorAngle(0)+16384),35.0),5.0,0,0); }
               ActivatorSound("ghost/step",127);
               GiveInventory("GhostStepDone",1);
               GiveInventory("GhostStepCooldown",35); 
@@ -728,7 +728,7 @@ script WEEB_ENTER ENTER
           }
           if (buttons & BT_SPEED && buttons & BT_BACK)
           {
-              if (CheckInventory("OnTheGround") == 1) { ThrustThing(KurtAngle+128,35,1,0); ThrustThingZ(0,85,1,1); } else { ThrustThing(KurtAngle+128,40,0,0); ThrustThingZ(0,20,0,0); }
+              if (CheckInventory("OnTheGround") == 1) { SetActorVelocity(0,velx + FixedMul(cos(GetActorAngle(0)+32768),35.0),vely + FixedMul(sin(GetActorAngle(0)+32768),35.0),-21.0,0,0); } else { SetActorVelocity(0,velx + FixedMul(cos(GetActorAngle(0)+32768),35.0),vely + FixedMul(sin(GetActorAngle(0)+32768),35.0),5.0,0,0); }
               ActivatorSound("ghost/step",127);
               GiveInventory("GhostStepDone",1);
               GiveInventory("GhostStepCooldown",35); 
@@ -736,7 +736,7 @@ script WEEB_ENTER ENTER
           }
           if (buttons & BT_SPEED && buttons & BT_MOVERIGHT)
           {
-              if (CheckInventory("OnTheGround") == 1) { ThrustThing(KurtAngle+192,35,1,0); ThrustThingZ(0,85,1,1); } else { ThrustThing(KurtAngle+192,40,0,0); ThrustThingZ(0,20,0,0); }
+              if (CheckInventory("OnTheGround") == 1) { SetActorVelocity(0,velx + FixedMul(cos(GetActorAngle(0)+49152),35.0),vely + FixedMul(sin(GetActorAngle(0)+49152),35.0),-21.0,0,0); } else { SetActorVelocity(0,velx + FixedMul(cos(GetActorAngle(0)+49152),35.0),vely + FixedMul(sin(GetActorAngle(0)+49152),35.0),5.0,0,0);}
               ActivatorSound("ghost/step",127);
               GiveInventory("GhostStepDone",1);
               GiveInventory("GhostStepCooldown",35); 

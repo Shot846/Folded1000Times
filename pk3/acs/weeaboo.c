@@ -1,5 +1,6 @@
-#include "zcommon.acs"
 #library "weeaboo"
+#include "zcommon.acs"
+
 
 #include "commonFuncs.h"
 
