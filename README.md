@@ -24,4 +24,4 @@ Hold Run and a direction to dodge in that direction, passing harmlessly through 
 
 
 Shot846:
-Why did I fork this? I replaced the dash code so it doesn't use byteangle, now it uses High Noon Drifter's implementation, so the dashing is accurate.
+Why did I fork this? I replaced the dash code so it doesn't use byteangle, now it uses High Noon Drifter's implementation (SetActorVelocity), so the dashing is accurate, and I won't get frustrated.
