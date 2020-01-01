@@ -1,14 +1,6 @@
 // Original walljump script by Xaser, manipulated and tweaked and bastardized for my own purposes.
 
 int velx2,vely2,velz2;
-int stick_forward; // positive is forward, negative is backward
-int stick_side; // positive is right, negative is left
-// Both of the above have a range of [-12800, 12800]
-
-
-int previous_buttons;
-int current_buttons;
-int MoveAngle;
 
 script SINO_DOUBLEJUMP ENTER
 {
